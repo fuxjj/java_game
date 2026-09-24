@@ -8,6 +8,15 @@ This project is a Java console simulation of a board game loosely based on Snake
 ## How to run
 Open the project in IntelliJ IDEA and run `Main.java`. This application runs a sequence of games, each with a different combination of variations with no user input required. Each game is configured in code and outputs its progress to the console.
 
+To play the game yourself from a terminal, open PowerShell in the project folder and run:
+
+```powershell
+javac -d out src\*.java
+java -cp out InteractiveMain
+```
+
+The interactive program asks you to choose Red or Blue and whether to use one or two dice. Enter your roll on each of your turns; the other player rolls randomly. For two dice, enter the total from 2 to 12.
+
 To test specific dice sequences `FixedDiceShaker` accepts a sequence of predetermined rolls: 
 
 ` DiceShaker dice = new FixedDiceShaker(12, 10, 12); `
